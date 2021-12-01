@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>McBabel.de/Home</title>
+</head>
+<body>
+ <header class="header">
+    <a href="#" class="header__logo">McBabel.de</a>
+
+    <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+    <nav class="nav" id="nav-menu">
+        <div class="nav__content bd-grid">
+
+            <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+
+            <div class="nav__perfil">
+                <div>
+                    <a href="#" class="nav__name">McBabel.de</a>
+                </div>
+            </div>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Games</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Teams</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">History</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ </header>
+ <section>
+      <h2 id="text">Willkommen</h2>
+      <a href="#sec" id="btn">Explore</a>
+     <img src="island.png" id="island">
+ </section>
+ <div class="sec" id="sec">
+          <div class="team-section">
+            <div class="inner-width">
+              
+                      <h1>meet the team</h1>
+                    <div class="title-underline center"><span></span></div>
+
+              <div class="pers">
+        
+        
+                <div class="pe">
+                  <img src="island.png" alt="">
+                  <div class="p-name">Devel<span style="color: #9fc0fd;">Light</span></div>
+                  <div class="p-des">Developer</div>
+                  <div class="p-sm">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+        
+                <div class="pe">
+                  <img src="island.png" alt="">
+                  <div class="p-name">Mc<span style="color: rgb(253, 148, 49);">Babel</span></div>
+                  <div class="p-des">Owner</div>
+                  <div class="p-sm">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+        
+                <div class="pe">
+                  <img src="island.png" alt="">
+                  <div class="p-name">The<span style="color: rgb(214, 25, 25);">Redstone</span>Albert</div>
+                  <div class="p-des">Developer</div>
+                  <div class="p-sm">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+        
+              </div>
+        
+            </div>
+          </div>
+        
+ </div>
+
+ 
+
+
+ <script>
+     let island = document.getElementById('island');
+     let text = document.getElementById('text');
+     let btn = document.getElementById('btn');
+
+     window.addEventListener('scroll', function(){
+         let value = window.scrollY;
+         island.style.top = value + 210 + 'px';
+
+         
+     })
+ </script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- ===== IONICONS ===== -->
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--===== MAIN JS =====-->
+<script src="main.js"></script>
+</body>
+</html>
