@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  
+ <header class="header">
+  <a href="#" class="header__logo">McBabel.de</a>
+
+  <ion-icon name="menu-outline" class="header__toggle" id="nav-toggle"></ion-icon>
+
+  <nav class="nav" id="nav-menu">
+      <div class="nav__content bd-grid">
+
+          <ion-icon name="close-outline" class="nav__close" id="nav-close"></ion-icon>
+
+          <div class="nav__perfil">
+              <div>
+                  <a href="#" class="nav__name">Mc<span style="color: rgb(253, 148, 49);">Babel</span>.de</a>
+              </div>
+          </div>
+
+          <div class="nav__menu">
+              <ul class="nav__list">
+                  <li class="nav__item"><a href="index.html" class="nav__link ">Home</a></li>
+                  <li class="nav__item"><a href="#" class="nav__link">Games</a></li>
+                  <li class="nav__item"><a href="index.html" class="nav__link">Teams</a></li>
+                  <li class="nav__item"><a href="#" class="nav__link">Bewerben</a></li>
+                  <li class="nav__item"><a href="https://www.mcbabel.de/forum" class="nav__link">Forum</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+</header>
+
+  <main>
+    <figure>
+    </figure>
+    <div class="headline">
+      <h2 class="text-headline">Bewerbung</h2>
+      <h3 class="text-subheadline">Wir freuen uns auf deine Bewerbung!</h2>
+    </div>
+    <form action="https://getform.io/f/e94ce927-847a-4983-85a5-de45fa302729" method="POST" enctype="multipart/form-data">
+      <span>
+        <label for="username" class="text-small-uppercase">Username</label>
+        <input class="text-body" id="username" name="username" type="text" required>
+      </span>
+      <span>
+        <label for="email" class="text-small-uppercase">Email</label>
+        <input class="text-body" id="email" name="email" type="email" required>
+      </span>
+      <span class="form-group">
+          <label for="exampleFormControlSelect1" class="text-small-uppercase">Job</label>
+          <br>
+          <br>
+          <br>
+          <select class="form-control text-body " id="exampleFormControlSelect1" type="text" name="Job" required="required">
+            <option>Builder</option>
+            <option>Supporter</option>
+            <option>Developer</option>
+          </select>
+      </span>
+      <input class="text-small-uppercase" id="submit" type="submit" value="Bewerben">
+    </form>
+  </main>
+  <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-medium: 500;
+  
+  /*===== Colores =====*/
+  --first-color: #232325;
+  --dark-color: #070D1F;
+  --dark-color-alt: #282B3A;
+  --white-color: #E6E7E9;
+
+
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Montserrat', sans-serif;
+  --big-font-size: 6.25rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 10.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*===== Margenes =====*/
+:root{
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+}
+
+/*===== z index =====*/
+:root{
+  --z-fixed: 100;
+}
+
+
+
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#0f73c5,#75abde);
+    overflow-x: hidden;
+    cursor: 90px; 
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+ /*===== HEADER =====*/
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 1.5rem;
+  z-index: var(--z-fixed);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.header__toggle {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/*===== LAYOUT =====*/
+.bd-grid{
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+.l-header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--first-color);
+}
+
+.bd-grid {
+  max-width: 1024px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/*===== NAV =====*/
+@media screen and (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: var(--dark-color);
+    opacity: 0.9;
+    color: var(--white-color);
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem 0;
+    z-index: var(--z-fixed);
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+}
+
+.nav__content {
+  height: 100%;
+  -ms-grid-rows: max-content 1fr max-content;
+      grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+      grid-template-rows: max-content 1fr max-content;
+  row-gap: 2rem;
+}
+
+.nav__close {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 1.3rem;
+  padding: .25rem;
+  background-color: var(--dark-color-alt);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: .25rem;
+  margin-bottom: .8rem;
+  width: 56px;
+  height: 56px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.nav__img img {
+  width: 46px;
+}
+
+.nav__name {
+  display: block;
+  color: var(--white-color);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav__profesion {
+  font-size: var(--small-font-size);
+}
+
+.nav__menu {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.nav__item {
+  margin: 2.5rem 0;
+}
+
+.nav__link {
+  color: var(--white-color);
+}
+
+.nav__social {
+  padding-top: .5rem;
+}
+
+.nav__social-icon {
+  font-size: 1.2rem;
+  color: var(--white-color);
+  margin-right: 1rem;
+}
+
+.nav__social-icon:hover {
+  color: var(--first-color);
+}
+
+/*Aparecer menu*/
+.show {
+  left: 0;
+}
+
+/*Active menu*/
+.active {
+  color: var(--first-color);
+}
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .header {
+    height: calc(var(--header-height) + 1rem);
+  }
+  .header__logo, .header__toggle {
+    display: none;
+  }
+  .nav {
+    width: 100%;
+  }
+  .nav__content {
+    -ms-grid-columns: (max-content)[3];
+        grid-template-columns: repeat(3, -webkit-max-content);
+        grid-template-columns: repeat(3, max-content);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav__close, .nav__profesion {
+    display: none;
+  }
+  .nav__perfil {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__img {
+    width: 32px;
+    height: 32px;
+    margin-right: .5rem;
+    margin-bottom: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__img img {
+    width: 26px;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__item {
+    margin: 0 .25rem;
+  }
+  .nav__link {
+    padding: .5rem .8rem;
+    border-radius: .25rem;
+  }
+  .nav__link:hover {
+    background-color: var(--first-color);
+    transition: ease-out 1s;
+  }
+  .active {
+    background-color: var(--first-color);
+    color: var(--white-color);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+    /* Structure */
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+input[type=submit] {
+  background: #fff;
+  height: 2.75rem;
+  margin: 1em auto auto;
+}
+
+@media (min-width: 768px) {
+  input[type=submit] {
+    background: #fff;
+    bottom: 2.75rem;
+    left: 2.55rem;
+    height: 2.75rem;
+    padding: 0 3rem;
+    position: absolute;
+  }
+}
+
+input[type=email],
+input[type=text] {
+  height: 1.5rem;
+  margin: 0 0 1.15rem;
+  width: 100%;
+}
+
+figure {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  figure {
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 50%;
+  }
+}
+
+form {
+  overflow: hidden;
+  padding: 10%;
+  position: relative;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  form {
+    float: left;
+    height: 78%;
+    padding: 6%;
+    width: 38%;
+  }
+}
+
+main {
+  margin: 30px auto auto;
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  main {
+    height: 21.25rem;
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 42.5rem;
+  }
+}
+
+.headline {
+  position: absolute;
+  top: 8vw;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .headline {
+    position: absolute;
+    top: 3.4rem;
+    width: 50%;
+  }
+}
+
+/* Skin */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 700 16px 'Montserrat', sans-serif;
+}
+
+input[type=email],
+input[type=text] {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #74bdb7;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input[type=email]:required,
+input[type=text]:required {
+  box-shadow: none;
+  outline: none;
+}
+
+input[type=submit] {
+  background: #f37b56;
+  border: none;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus {
+  background: #f79577;
+  cursor: pointer;
+  outline: none;
+}
+
+.inputs--filled label {
+  transform: translate(0, 0);
+}
+
+.inputs--invalid input {
+  animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+  background: url(//my-assets.netlify.com/codepen/dailyui-001/ico-invalid.svg) center right no-repeat;
+  border-bottom: 2px solid #f37b56;
+  box-shadow: none;
+  color: #f37b56;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  33% {
+    transform: translate3d(-6px, 0, 0);
+  }
+
+  66% {
+    transform: translate3d(6px, 0, 0);
+  }
+}
+
+.inputs--invalid label {
+  color: #f37b56;
+}
+
+label {
+  display: inline-block;
+  transform: translate(0, 1.25rem);
+  transition: 0.15s;
+}
+
+main {
+  background: #f9f6ed;
+  border-radius: 0.25rem;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+}
+
+.text-headline {
+  color: #74bdb7;
+  letter-spacing: 0.4rem;
+  font: 700 1.4em 'Montserrat';
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .text-headline {
+    font: 700 1.625rem 'Montserrat';
+  }
+}
+
+.text-body {
+  color: #354c58;
+  font: 700 16px 'Montserrat', sans-serif;
+}
+
+.text-small-uppercase {
+  color: #74bdb7;
+  font: 700 .75rem 'Montserrat';
+  letter-spacing: .08rem;
+  text-transform: uppercase;
+}
+
+.text-subheadline {
+  color: #f37b56;
+  left: -.17rem;
+  letter-spacing: .143rem;
+  font: 700 0.652rem 'Montserrat';
+  margin-bottom: 1.5rem;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .text-subheadline {
+    font: 700 0.75rem 'Montserrat';
+  }
+}
+  </style>
+
+  <script>var inputs = document.querySelectorAll( 'input[type=text], input[type=email]' );
+    for (i = 0; i < inputs.length; i ++) {
+      var inputEl = inputs[i];
+      if( inputEl.value.trim() !== '' ) {
+        inputEl.parentNode.classList.add( 'input--filled' );
+      }
+      inputEl.addEventListener( 'focus', onFocus );
+      inputEl.addEventListener( 'blur', onBlur );
+    }
+    
+    function onFocus( ev ) {
+      ev.target.parentNode.classList.add( 'inputs--filled' );
+    }
+    
+    function onBlur( ev ) {
+      if ( ev.target.value.trim() === '' ) {
+        ev.target.parentNode.classList.remove( 'inputs--filled' );
+      } else if ( ev.target.checkValidity() == false ) {
+        ev.target.parentNode.classList.add( 'inputs--invalid' );
+        ev.target.addEventListener( 'input', liveValidation );
+      } else if ( ev.target.checkValidity() == true ) {
+        ev.target.parentNode.classList.remove( 'inputs--invalid' );
+        ev.target.addEventListener( 'input', liveValidation );
+      }
+    }
+    
+    function liveValidation( ev ) {
+      if ( ev.target.checkValidity() == false ) {
+        ev.target.parentNode.classList.add( 'inputs--invalid' );
+      } else {
+        ev.target.parentNode.classList.remove( 'inputs--invalid' );
+      }
+    }
+    
+    var submitBtn = document.querySelector( 'input[type=submit]' );
+    submitBtn.addEventListener( 'click', onSubmit );
+    
+    function onSubmit( ev ) {
+      var inputsWrappers = ev.target.parentNode.querySelectorAll( 'span' );
+      for (i = 0; i < inputsWrappers.length; i ++) {
+        input = inputsWrappers[i].querySelector( 'input[type=text], input[type=email]' );
+        if ( input.checkValidity() == false ) {
+          inputsWrappers[i].classList.add( 'inputs--invalid' );
+        } else if ( input.checkValidity() == true ) {
+          inputsWrappers[i].classList.remove( 'inputs--invalid' );
+        }
+      }
+    }</script>
+</body>
+</html>
